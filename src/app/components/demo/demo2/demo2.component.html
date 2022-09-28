@@ -1,0 +1,18 @@
+<p>demo2 works!</p>
+<div>
+  <p style="cursor: pointer;" (click)="changeVisible()">Click ici</p>
+  <p *ngIf="isvisible">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita deleniti illum iste perspiciatis officiis? Ex dolor porro, quo ipsum tempora temporibus, incidunt rem quasi consectetur voluptatum exercitationem obcaecati itaque. Vel!</p>
+</div>
+
+<ul>
+  <li *ngFor="let fruit of liste; let i = index; let pair = even">
+    <p [ngClass]="{'maclasse' : fruit == 'pomme'}">{{i}} - {{fruit}}</p>
+  </li>
+</ul>
+
+<p *ngIf="nbr > 5; else elseTemplate">
+  nombre supérieur à 5
+</p>
+<ng-template #elseTemplate>
+  <p>nombre inférieur a 5</p>
+</ng-template>

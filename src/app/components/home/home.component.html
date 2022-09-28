@@ -1,0 +1,12 @@
+<p>home works!</p>
+<p>Binding One way {{MonTexte}}</p>
+
+<p><input type="text" [(ngModel)]="MonTexte"> Two Ways</p>
+
+<p><button (click)="ChangeValue()" [disabled]="MonTexte == '5'">Event binding</button></p>
+
+
+<a [routerLink]="myprop">google</a>
+
+<hr />
+<p>Etat de connexion : {{etat}}</p>

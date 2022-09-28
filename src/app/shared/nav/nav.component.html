@@ -1,0 +1,11 @@
+<p>nav works!</p>
+<ul>
+  <li *ngFor="let lien of listeLien; let i = index">
+    <a (click)="setVisible(i)">{{lien.title}}</a>
+    <ul *ngIf="lien.isChildrenVisible && lien.children">
+      <li *ngFor="let souslien of lien.children">
+        <a [routerLink]="souslien.url">{{souslien.title}}</a>
+      </li>
+    </ul>
+  </li>
+</ul>

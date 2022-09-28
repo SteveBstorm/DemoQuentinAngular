@@ -1,0 +1,4 @@
+<p>demo4 works!</p>
+<p>Etat de connexion : {{localIsConnected}}</p>
+<button (click)="login()" *ngIf="!localIsConnected">Se Connecter</button>
+<button (click)="logout()" *ngIf="localIsConnected">Se Déconnecter</button>
